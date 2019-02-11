@@ -16,7 +16,7 @@ public class CamController : MonoBehaviour
         offset = new Vector3(0, FollowOffsetY, FollowOffsetZ);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.position = Vector3.Lerp(transform.position, ObjectToTrack.position + offset, Time.deltaTime * LerpFactor);
     }
