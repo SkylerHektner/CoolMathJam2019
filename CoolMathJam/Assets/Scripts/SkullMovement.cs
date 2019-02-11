@@ -11,23 +11,14 @@ public class SkullMovement : MonoBehaviour
 
     private Rigidbody rb;
     private bool jumped = false;
-    int FixedUpdatesPerFrame = 0;
     
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
-    {
-        Debug.Log( "FixedUpdatesPerFrame: " + FixedUpdatesPerFrame );
-        FixedUpdatesPerFrame = 0;
-    }
-
     private void FixedUpdate()
     {
-        FixedUpdatesPerFrame++;
-        
         rb.AddForce(Vector3.right * Input.GetAxis("Horizontal") * Time.deltaTime * RollPower, ForceMode.Acceleration);
 
         if (!jumped && Input.GetButtonDown("Jump"))

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d06bb13ce69c3e64ea438a8a5dfde15e
+guid: 7095d49f33c68bf4bbb3b66a938c48ca
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -22,6 +22,7 @@ ModelImporter:
     100032: upperArm_r
     100034: upperLeg_l
     100036: upperLeg_r
+    100038: mesh
     400000: Armature
     400002: Cube_003
     400004: foot_l
@@ -41,13 +42,18 @@ ModelImporter:
     400032: upperArm_r
     400034: upperLeg_l
     400036: upperLeg_r
+    400038: mesh
     2100000: Material_002
     4300000: Cube_003
+    4300002: mesh
     7400000: Default Take
-    7400002: Idle
-    7400004: Run
+    7400002: Dead
+    7400004: Idle
+    7400006: Run
     9500000: //RootNode
     13700000: Cube_003
+    13700002: mesh
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -76,6 +82,34 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations:
+    - serializedVersion: 16
+      name: Dead
+      takeName: Dead
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Idle
       takeName: Idle
@@ -155,7 +189,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
