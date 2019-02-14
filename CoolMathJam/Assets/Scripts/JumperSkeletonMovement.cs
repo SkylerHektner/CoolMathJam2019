@@ -20,6 +20,11 @@ public class JumperSkeletonMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(IsGrounded() && (rb.velocity.x < 0.001f && rb.velocity.x > -0.001f))
+        {
+            rb.velocity = Vector3.zero;
+        }
+
         if(rb.velocity.x > maxSpeed)
             rb.velocity = new Vector3(maxSpeed, rb.velocity.y, rb.velocity.z);
         else if(rb.velocity.x < -maxSpeed)
