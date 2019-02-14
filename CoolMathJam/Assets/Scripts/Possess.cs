@@ -22,7 +22,7 @@ public class Possess : MonoBehaviour
 
     private void Start()
     {
-        System.Collections.Generic.IEnumerable<IPossessable> temp = FindObjectsOfType<MonoBehaviour>().OfType<IPossessable>();
+        IEnumerable<IPossessable> temp = FindObjectsOfType<MonoBehaviour>().OfType<IPossessable>();
         foreach (IPossessable p in temp)
         {
             possessables.Add(p);
@@ -74,6 +74,7 @@ public class Possess : MonoBehaviour
         }
         else
         {
+            // check if the player is trying to end possession
             if (Input.GetButtonDown("Possess"))
             {
                 Debug.Log("ENDING POSSESSION OF CANDIDATE");
