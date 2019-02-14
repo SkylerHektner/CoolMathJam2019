@@ -34,6 +34,7 @@ public class Skeleton : MonoBehaviour, IPossessable
     public void OnDePossess()
     {
         renderer.material = ValidCandidateMat;
+        GetComponent<JumperSkeletonMovement>().CanMove = false;
     }
 
     public void OnNoLongerCandidate()
@@ -44,5 +45,6 @@ public class Skeleton : MonoBehaviour, IPossessable
     public void OnPossess()
     {
         renderer.material = originalMat;
+        GetComponent<JumperSkeletonMovement>().CanMove = true;
     }
 }

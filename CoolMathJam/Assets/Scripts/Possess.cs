@@ -69,6 +69,7 @@ public class Possess : MonoBehaviour
                     possessing = true;
                     rb.useGravity = false;
                     rb.isKinematic = true;
+                    rb.detectCollisions = false;
                 }
             }
         }
@@ -88,6 +89,7 @@ public class Possess : MonoBehaviour
                 skullMovement.CanMove = true;
                 rb.useGravity = true;
                 rb.isKinematic = false;
+                rb.detectCollisions = true;
                 StartCoroutine(RotateHead(10, originalRot));
             }
         }

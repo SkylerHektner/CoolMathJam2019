@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class JumperSkeletonMovement : MonoBehaviour
 {
+    public bool CanMove
+    {
+        get
+        {
+            return canMove;
+        }
+        set
+        {
+            canMove = value;
+            if (!canMove)
+            {
+                animator.SetBool("IsRunning", false);
+            }
+        }
+    }
+    private bool canMove = false;
+
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
     [SerializeField] private float maxSpeed;
@@ -20,9 +37,15 @@ public class JumperSkeletonMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(IsGrounded() && (rb.velocity.x < 0.001f && rb.velocity.x > -0.001f))
+
+        if (IsGrounded() && (rb.velocity.x < 0.001f && rb.velocity.x > -0.001f))
         {
             rb.velocity = Vector3.zero;
+        }
+
+        if (!canMove)
+        {
+            return;
         }
 
         if(rb.velocity.x > maxSpeed)
