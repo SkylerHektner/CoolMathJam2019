@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: 7095d49f33c68bf4bbb3b66a938c48ca
+guid: 39c2a623043bff34ea0ae90443ba491c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Armature
-    100002: Cube_003
-    100004: foot_l
-    100006: foot_r
-    100008: forearm_l
-    100010: forearm_r
-    100012: hand_l
-    100014: hand_r
-    100016: head
-    100018: hips
-    100020: lowerLeg_l
-    100022: lowerLeg_r
+    100002: foot_l
+    100004: foot_r
+    100006: forearm_l
+    100008: forearm_r
+    100010: hand_l
+    100012: hand_r
+    100014: head
+    100016: hips
+    100018: lowerLeg_l
+    100020: lowerLeg_r
+    100022: mesh
     100024: neck
     100026: //RootNode
     100028: spine
@@ -22,19 +22,18 @@ ModelImporter:
     100032: upperArm_r
     100034: upperLeg_l
     100036: upperLeg_r
-    100038: mesh
     400000: Armature
-    400002: Cube_003
-    400004: foot_l
-    400006: foot_r
-    400008: forearm_l
-    400010: forearm_r
-    400012: hand_l
-    400014: hand_r
-    400016: head
-    400018: hips
-    400020: lowerLeg_l
-    400022: lowerLeg_r
+    400002: foot_l
+    400004: foot_r
+    400006: forearm_l
+    400008: forearm_r
+    400010: hand_l
+    400012: hand_r
+    400014: head
+    400016: hips
+    400018: lowerLeg_l
+    400020: lowerLeg_r
+    400022: mesh
     400024: neck
     400026: //RootNode
     400028: spine
@@ -42,18 +41,18 @@ ModelImporter:
     400032: upperArm_r
     400034: upperLeg_l
     400036: upperLeg_r
-    400038: mesh
     2100000: Material_002
-    4300000: Cube_003
-    4300002: mesh
+    4300000: mesh
     7400000: Default Take
-    7400002: Dead
+    7400002: Falling
     7400004: Idle
-    7400006: Run
+    7400006: Inactive
+    7400008: Landing
+    7400010: Run
+    7400012: Silly-Jump
+    7400014: Silly-Run
     9500000: //RootNode
-    13700000: Cube_003
-    13700002: mesh
-    2186277476908879412: ImportLogs
+    13700000: mesh
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -83,10 +82,38 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Dead
-      takeName: Dead
+      name: Default Take
+      takeName: Default Take
       firstFrame: 0
-      lastFrame: 9
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Falling
+      takeName: Falling
+      firstFrame: 0
+      lastFrame: 19
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -139,8 +166,120 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
+      name: Inactive
+      takeName: Inactive
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Landing
+      takeName: Landing
+      firstFrame: 0
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: Run
       takeName: Run
+      firstFrame: 0
+      lastFrame: 27
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Silly-Jump
+      takeName: Silly-Jump
+      firstFrame: 0
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Silly-Run
+      takeName: Silly-Run
       firstFrame: 0
       lastFrame: 27
       wrapMode: 0
