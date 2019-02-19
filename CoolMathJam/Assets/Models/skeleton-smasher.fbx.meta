@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 39c2a623043bff34ea0ae90443ba491c
+guid: 3a2d00afb3a50544a9d50241a7db40e9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Armature
+    100000: Armature_002
     100002: foot_l
     100004: foot_r
     100006: forearm_l
@@ -14,7 +14,7 @@ ModelImporter:
     100016: hips
     100018: lowerLeg_l
     100020: lowerLeg_r
-    100022: mesh
+    100022: mesh_002
     100024: neck
     100026: //RootNode
     100028: spine
@@ -22,7 +22,7 @@ ModelImporter:
     100032: upperArm_r
     100034: upperLeg_l
     100036: upperLeg_r
-    400000: Armature
+    400000: Armature_002
     400002: foot_l
     400004: foot_r
     400006: forearm_l
@@ -33,7 +33,7 @@ ModelImporter:
     400016: hips
     400018: lowerLeg_l
     400020: lowerLeg_r
-    400022: mesh
+    400022: mesh_002
     400024: neck
     400026: //RootNode
     400028: spine
@@ -42,18 +42,21 @@ ModelImporter:
     400034: upperLeg_l
     400036: upperLeg_r
     2100000: Material_002
-    4300000: mesh
-    7400000: Default Take
-    7400002: Falling-Jumper
-    7400004: Idle-Jumper
-    7400006: Inactive-Jumper
-    7400008: Landing-Jumper
-    7400010: Run-Jumper
-    7400012: Silly-Jump-Jumper
-    7400014: Silly-Run-Jumper
+    4300000: mesh_002
+    7400000: Falling-Smasher
+    7400002: Idle-Smasher
+    7400004: Idle_001
+    7400006: Idle_002
+    7400008: Inactive-Smasher
+    7400010: Inactive_001
+    7400012: Landing-Smasher
+    7400014: Run-Smasher
+    7400016: Silly-Jump-Smasher
+    7400018: Silly-Jump_001
+    7400020: Silly-Run-Smasher
+    7400022: Throw-Smasher
     9500000: //RootNode
-    13700000: mesh
-    2186277476908879412: ImportLogs
+    13700000: mesh_002
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -83,7 +86,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Falling-Jumper
+      name: Falling-Smasher
       takeName: Falling
       firstFrame: 0
       lastFrame: 19
@@ -111,7 +114,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle-Jumper
+      name: Idle-Smasher
       takeName: Idle
       firstFrame: 0
       lastFrame: 49
@@ -139,7 +142,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Inactive-Jumper
+      name: Inactive-Smasher
       takeName: Inactive
       firstFrame: 0
       lastFrame: 9
@@ -167,7 +170,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Landing-Jumper
+      name: Landing-Smasher
       takeName: Landing
       firstFrame: 0
       lastFrame: 5
@@ -195,7 +198,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Run-Jumper
+      name: Run-Smasher
       takeName: Run
       firstFrame: 0
       lastFrame: 27
@@ -223,7 +226,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Silly-Jump-Jumper
+      name: Silly-Jump-Smasher
       takeName: Silly-Jump
       firstFrame: 0
       lastFrame: 26
@@ -251,7 +254,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Silly-Run-Jumper
+      name: Silly-Run-Smasher
       takeName: Silly-Run
       firstFrame: 0
       lastFrame: 27
@@ -262,6 +265,34 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Throw-Smasher
+      takeName: Throw
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

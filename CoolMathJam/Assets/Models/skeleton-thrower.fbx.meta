@@ -1,59 +1,56 @@
 fileFormatVersion: 2
-guid: 39c2a623043bff34ea0ae90443ba491c
+guid: f55660ce6fe35dc46b09362c86653a11
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Armature
+    100000: Armature_001
     100002: foot_l
     100004: foot_r
-    100006: forearm_l
-    100008: forearm_r
-    100010: hand_l
-    100012: hand_r
-    100014: head
-    100016: hips
-    100018: lowerLeg_l
-    100020: lowerLeg_r
-    100022: mesh
-    100024: neck
-    100026: //RootNode
-    100028: spine
-    100030: upperArm_l
-    100032: upperArm_r
-    100034: upperLeg_l
-    100036: upperLeg_r
-    400000: Armature
+    100006: forearm_r
+    100008: hand_r
+    100010: head
+    100012: hips
+    100014: lowerLeg_l
+    100016: lowerLeg_r
+    100018: mesh_001
+    100020: neck
+    100022: //RootNode
+    100024: spine
+    100026: upperArm_r
+    100028: upperLeg_l
+    100030: upperLeg_r
+    400000: Armature_001
     400002: foot_l
     400004: foot_r
-    400006: forearm_l
-    400008: forearm_r
-    400010: hand_l
-    400012: hand_r
-    400014: head
-    400016: hips
-    400018: lowerLeg_l
-    400020: lowerLeg_r
-    400022: mesh
-    400024: neck
-    400026: //RootNode
-    400028: spine
-    400030: upperArm_l
-    400032: upperArm_r
-    400034: upperLeg_l
-    400036: upperLeg_r
-    2100000: Material_002
-    4300000: mesh
+    400006: forearm_r
+    400008: hand_r
+    400010: head
+    400012: hips
+    400014: lowerLeg_l
+    400016: lowerLeg_r
+    400018: mesh_001
+    400020: neck
+    400022: //RootNode
+    400024: spine
+    400026: upperArm_r
+    400028: upperLeg_l
+    400030: upperLeg_r
+    2100000: Material_002__skeleton-texture
+    2100002: Material_002
+    4300000: mesh_001
     7400000: Default Take
-    7400002: Falling-Jumper
-    7400004: Idle-Jumper
-    7400006: Inactive-Jumper
-    7400008: Landing-Jumper
-    7400010: Run-Jumper
-    7400012: Silly-Jump-Jumper
-    7400014: Silly-Run-Jumper
+    7400002: Falling-Thrower
+    7400004: Idle-Thrower
+    7400006: Idle_001
+    7400008: Inactive-Thrower
+    7400010: Landing-Thrower
+    7400012: Run-Thrower
+    7400014: Silly-Jump-Thrower
+    7400016: Silly-Jump_001
+    7400018: Silly-Run-Thrower
+    7400020: Throw
     9500000: //RootNode
-    13700000: mesh
-    2186277476908879412: ImportLogs
+    13700000: mesh_001
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -83,7 +80,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Falling-Jumper
+      name: Falling-Thrower
       takeName: Falling
       firstFrame: 0
       lastFrame: 19
@@ -111,7 +108,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle-Jumper
+      name: Idle-Thrower
       takeName: Idle
       firstFrame: 0
       lastFrame: 49
@@ -139,7 +136,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Inactive-Jumper
+      name: Inactive-Thrower
       takeName: Inactive
       firstFrame: 0
       lastFrame: 9
@@ -149,7 +146,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -167,7 +164,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Landing-Jumper
+      name: Landing-Thrower
       takeName: Landing
       firstFrame: 0
       lastFrame: 5
@@ -195,7 +192,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Run-Jumper
+      name: Run-Thrower
       takeName: Run
       firstFrame: 0
       lastFrame: 27
@@ -223,7 +220,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Silly-Jump-Jumper
+      name: Silly-Jump-Thrower
       takeName: Silly-Jump
       firstFrame: 0
       lastFrame: 26
@@ -251,7 +248,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Silly-Run-Jumper
+      name: Silly-Run-Thrower
       takeName: Silly-Run
       firstFrame: 0
       lastFrame: 27
@@ -262,6 +259,34 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Throw
+      takeName: Throw
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
