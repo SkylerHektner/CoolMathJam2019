@@ -28,6 +28,7 @@ public class JumperSkeletonMovement : MonoBehaviour
     private Rigidbody rb;
     private Animator animator;
     private float distToGround;
+    private bool isGrounded = true;
 
     void Start()
     {
@@ -64,13 +65,13 @@ public class JumperSkeletonMovement : MonoBehaviour
         Vector3 movement = new Vector3 (horizontalInput, 0.0f, 0.0f);
         rb.AddForce(movement * speed, ForceMode.Impulse);
 
-        Debug.Log(rb.velocity.x);
         if(rb.velocity.x == 0)
         {
             animator.SetBool("IsRunning", false);
         }
         else if(rb.velocity.x != 0 && IsGrounded())
         {
+            Debug.Log("ADSSADASD");
             animator.SetBool("IsRunning", true);
         }
 
@@ -85,12 +86,6 @@ public class JumperSkeletonMovement : MonoBehaviour
         {
             rb.velocity += Vector3.down * 20 * Time.deltaTime;
         }
-
-        // If not holding jump during upwards momentum, add a little force downwards.
-        //if(rb.velocity.y > 0 && !Input.GetButtonDown("Jump"))
-        //{
-        //    rb.velocity -= Vector3.down * 2 * Time.deltaTime;
-        //}
     }
 
     private bool IsGrounded()
@@ -103,5 +98,23 @@ public class JumperSkeletonMovement : MonoBehaviour
             animator.SetBool("Grounded", false);
 
         return isGrounded;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Floor")
+        {
+            isGrounded = true;
+            animator.SetBool("Grounded", true);
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.tag == "Floor")
+        {
+            isGrounded = false;
+            animator.SetBool("Grounded", false);
+        }
     }
 }
