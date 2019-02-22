@@ -39,10 +39,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9189739335371240215}
+  - component: {fileID: 579984021}
+  - component: {fileID: 579984020}
   - component: {fileID: 579984019}
   - component: {fileID: 579984018}
-  - component: {fileID: 579984020}
-  - component: {fileID: 579984021}
   m_Layer: 0
   m_Name: Skeleton-Smasher
   m_TagString: Untagged
@@ -65,6 +65,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &579984021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8740316252039308588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1179f4961a2b4ebd97635c08a17a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neckTransform: {fileID: 5916299410292775907}
+  ValidCandidateMat: {fileID: 2100000, guid: ea56caacf68b4a849a5a0ba906f93395, type: 2}
+--- !u!114 &579984020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8740316252039308588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8bccf3001d1494ea3c1ead2cfaf4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  jumpPower: 5
+  maxSpeed: 3
 --- !u!54 &579984019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -95,35 +124,6 @@ CapsuleCollider:
   m_Height: 1.33
   m_Direction: 1
   m_Center: {x: 0.12, y: 0.66, z: 0}
---- !u!114 &579984020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8740316252039308588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd8bccf3001d1494ea3c1ead2cfaf4e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  jumpPower: 5
-  maxSpeed: 3
---- !u!114 &579984021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8740316252039308588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78b1179f4961a2b4ebd97635c08a17a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  neckTransform: {fileID: 5916299410292775907}
-  ValidCandidateMat: {fileID: 2100000, guid: ea56caacf68b4a849a5a0ba906f93395, type: 2}
 --- !u!1001 &6393513585623295643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +131,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9189739335371240215}
     m_Modifications:
+    - target: {fileID: 100026, guid: 3a2d00afb3a50544a9d50241a7db40e9, type: 3}
+      propertyPath: m_Name
+      value: skeleton-smasher
+      objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: 3a2d00afb3a50544a9d50241a7db40e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -174,10 +178,6 @@ PrefabInstance:
     - target: {fileID: 400026, guid: 3a2d00afb3a50544a9d50241a7db40e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100026, guid: 3a2d00afb3a50544a9d50241a7db40e9, type: 3}
-      propertyPath: m_Name
-      value: skeleton-smasher
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 3a2d00afb3a50544a9d50241a7db40e9, type: 3}
       propertyPath: m_Controller

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumperSkeletonMovement : MonoBehaviour
+public class SkeletonMovement : MonoBehaviour
 {
     public bool CanMove
     {
@@ -29,19 +29,21 @@ public class JumperSkeletonMovement : MonoBehaviour
     private Animator animator;
     private float distToGround;
     private bool isGrounded = true;
+    private LayerMask floorMask;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();  
-        animator = GetComponentInChildren<Animator>();  
+        animator = GetComponentInChildren<Animator>(); 
+        floorMask = 1 << LayerMask.NameToLayer("Floor"); 
     }
 
     void FixedUpdate()
     {
-
+        // Snap the x velocity to zero if below a certain point.
         if (IsGrounded() && (rb.velocity.x < 0.001f && rb.velocity.x > -0.001f))
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z);
         }
 
         if (!canMove)
@@ -49,11 +51,12 @@ public class JumperSkeletonMovement : MonoBehaviour
             return;
         }
 
+        // Clamp the velocity to the max speed.
         if(rb.velocity.x > maxSpeed)
             rb.velocity = new Vector3(maxSpeed, rb.velocity.y, rb.velocity.z);
         else if(rb.velocity.x < -maxSpeed)
             rb.velocity = new Vector3(-maxSpeed, rb.velocity.y, rb.velocity.z);
-        //rb.velocity.x = Vector3.ClampMagnitude(rb.velocity.x, maxSpeed);
+
         float horizontalInput = Input.GetAxis ("Horizontal");
 
         // Flip the skeleton depending on which direction he's going.
@@ -71,7 +74,6 @@ public class JumperSkeletonMovement : MonoBehaviour
         }
         else if(rb.velocity.x != 0 && IsGrounded())
         {
-            Debug.Log("ADSSADASD");
             animator.SetBool("IsRunning", true);
         }
 
@@ -81,16 +83,11 @@ public class JumperSkeletonMovement : MonoBehaviour
             animator.SetTrigger("Jumped");
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
         }
-
-        if(rb.velocity.y < 1)
-        {
-            rb.velocity += Vector3.down * 20 * Time.deltaTime;
-        }
     }
 
     private bool IsGrounded()
     {
-        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, 0.1f);
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, 0.75f, floorMask);
 
         if(isGrounded)
             animator.SetBool("Grounded", true);
@@ -100,6 +97,7 @@ public class JumperSkeletonMovement : MonoBehaviour
         return isGrounded;
     }
 
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Floor")
@@ -117,4 +115,5 @@ public class JumperSkeletonMovement : MonoBehaviour
             animator.SetBool("Grounded", false);
         }
     }
+    */
 }

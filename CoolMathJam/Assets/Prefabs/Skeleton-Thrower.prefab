@@ -39,10 +39,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3225983120544202830}
+  - component: {fileID: 370401356}
+  - component: {fileID: 370401355}
   - component: {fileID: 370401354}
   - component: {fileID: 370401353}
-  - component: {fileID: 370401355}
-  - component: {fileID: 370401356}
   m_Layer: 0
   m_Name: Skeleton-Thrower
   m_TagString: Untagged
@@ -65,6 +65,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &370401356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117768021845793849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b1179f4961a2b4ebd97635c08a17a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neckTransform: {fileID: 726218553066979967}
+  ValidCandidateMat: {fileID: 2100000, guid: ea56caacf68b4a849a5a0ba906f93395, type: 2}
+--- !u!114 &370401355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117768021845793849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8bccf3001d1494ea3c1ead2cfaf4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  jumpPower: 7
+  maxSpeed: 4
 --- !u!54 &370401354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -95,35 +124,6 @@ CapsuleCollider:
   m_Height: 1.72
   m_Direction: 1
   m_Center: {x: 0, y: 0.83, z: 0}
---- !u!114 &370401355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117768021845793849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd8bccf3001d1494ea3c1ead2cfaf4e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  jumpPower: 5
-  maxSpeed: 4
---- !u!114 &370401356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117768021845793849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78b1179f4961a2b4ebd97635c08a17a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  neckTransform: {fileID: 726218553066979967}
-  ValidCandidateMat: {fileID: 2100000, guid: ea56caacf68b4a849a5a0ba906f93395, type: 2}
 --- !u!1001 &6502025815856058248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +131,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3225983120544202830}
     m_Modifications:
+    - target: {fileID: 100022, guid: f55660ce6fe35dc46b09362c86653a11, type: 3}
+      propertyPath: m_Name
+      value: skeleton-thrower
+      objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: f55660ce6fe35dc46b09362c86653a11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -174,10 +178,6 @@ PrefabInstance:
     - target: {fileID: 400022, guid: f55660ce6fe35dc46b09362c86653a11, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100022, guid: f55660ce6fe35dc46b09362c86653a11, type: 3}
-      propertyPath: m_Name
-      value: skeleton-thrower
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: f55660ce6fe35dc46b09362c86653a11, type: 3}
       propertyPath: m_Controller
