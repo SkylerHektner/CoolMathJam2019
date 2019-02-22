@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public ITriggerable[] triggerables;
+    public GameObject[] Triggerables;
+    private List<ITriggerable> triggerables = new List<ITriggerable>();
 
     private int onCount = 0;
+
+    private void Start()
+    {
+        foreach (GameObject g in Triggerables)
+        {
+            triggerables.Add(g.GetComponent<ITriggerable>());
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
