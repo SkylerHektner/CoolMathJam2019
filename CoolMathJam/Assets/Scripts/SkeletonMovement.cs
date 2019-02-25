@@ -28,7 +28,6 @@ public class SkeletonMovement : MonoBehaviour
     private Rigidbody rb;
     private Animator animator;
     private float distToGround;
-    private bool isGrounded = true;
     private LayerMask floorMask;
 
     void Start()
@@ -38,7 +37,7 @@ public class SkeletonMovement : MonoBehaviour
         floorMask = 1 << LayerMask.NameToLayer("Floor"); 
     }
 
-    void FixedUpdate()
+    void Update()
     {
         // Snap the x velocity to zero if below a certain point.
         if (IsGrounded() && (rb.velocity.x < 0.001f && rb.velocity.x > -0.001f))
@@ -96,24 +95,4 @@ public class SkeletonMovement : MonoBehaviour
 
         return isGrounded;
     }
-
-    /*
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "Floor")
-        {
-            isGrounded = true;
-            animator.SetBool("Grounded", true);
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.collider.tag == "Floor")
-        {
-            isGrounded = false;
-            animator.SetBool("Grounded", false);
-        }
-    }
-    */
 }

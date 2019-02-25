@@ -12,25 +12,25 @@ public class MoveablePlatform : MonoBehaviour, ITriggerable
 
     private void Start()
     {
-        originalPos = transform.position;
+        originalPos = transform.localPosition;
     }
 
     private void Update()
     {
-        if (GoToMovePos && transform.position != moveToPos)
+        if (GoToMovePos && transform.localPosition != moveToPos)
         {
-            transform.position += (moveToPos - transform.position).normalized * Time.deltaTime * moveSpeed;
-            if ((moveToPos - transform.position).sqrMagnitude < 0.01f)
+            transform.localPosition += (moveToPos - transform.localPosition).normalized * Time.deltaTime * moveSpeed;
+            if ((moveToPos - transform.localPosition).sqrMagnitude < 0.01f)
             {
-                transform.position = moveToPos;
+                transform.localPosition = moveToPos;
             }
         }
-        else if (!GoToMovePos && transform.position != originalPos)
+        else if (!GoToMovePos && transform.localPosition != originalPos)
         {
-            transform.position += (originalPos - transform.position).normalized * Time.deltaTime * moveSpeed;
-            if ((originalPos - transform.position).sqrMagnitude < 0.01f)
+            transform.localPosition += (originalPos - transform.localPosition).normalized * Time.deltaTime * moveSpeed;
+            if ((originalPos - transform.localPosition).sqrMagnitude < 0.01f)
             {
-                transform.position = originalPos;
+                transform.localPosition = originalPos;
             }
         }
     }

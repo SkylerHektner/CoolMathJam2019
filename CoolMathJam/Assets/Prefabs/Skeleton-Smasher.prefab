@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 579984018}
   m_Layer: 0
   m_Name: Skeleton-Smasher
-  m_TagString: Untagged
+  m_TagString: Skeleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,10 +131,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9189739335371240215}
     m_Modifications:
-    - target: {fileID: 100026, guid: 3a2d00afb3a50544a9d50241a7db40e9, type: 3}
-      propertyPath: m_Name
-      value: skeleton-smasher
-      objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: 3a2d00afb3a50544a9d50241a7db40e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -178,6 +174,10 @@ PrefabInstance:
     - target: {fileID: 400026, guid: 3a2d00afb3a50544a9d50241a7db40e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 3a2d00afb3a50544a9d50241a7db40e9, type: 3}
+      propertyPath: m_Name
+      value: skeleton-smasher
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 3a2d00afb3a50544a9d50241a7db40e9, type: 3}
       propertyPath: m_Controller
