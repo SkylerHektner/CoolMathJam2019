@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 9189739335371240215}
   - component: {fileID: 579984021}
   - component: {fileID: 579984020}
+  - component: {fileID: 2827955876134905901}
   - component: {fileID: 579984019}
   - component: {fileID: 579984018}
   m_Layer: 12
@@ -94,6 +95,20 @@ MonoBehaviour:
   speed: 1
   jumpPower: 5
   maxSpeed: 3
+--- !u!114 &2827955876134905901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8740316252039308588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b7e2c06073ed479969020660c42a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canSmash: 0
+  smashRange: 1
 --- !u!54 &579984019
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ TagManager:
   - Floor
   - Skeleton
   - Skull
+  - Breakable
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Floor
   - Skull
   - Skeleton
-  - 
+  - Breakable
   - 
   - 
   - 

@@ -39,6 +39,10 @@ public class Skeleton : MonoBehaviour, IPossessable
         ThrowSkull ts = GetComponent<ThrowSkull>();
         if (ts != null)
             ts.canThrow = false;
+
+        Smash s = GetComponent<Smash>();
+        if (s != null)
+            s.canSmash = false;
     }
 
     public void OnNoLongerCandidate()
@@ -54,5 +58,9 @@ public class Skeleton : MonoBehaviour, IPossessable
         ThrowSkull ts = GetComponent<ThrowSkull>();
         if (ts != null)
             ts.canThrow = true;
+
+        Smash s = GetComponent<Smash>();
+        if (s != null)
+            s.canSmash = true;
     }
 }
