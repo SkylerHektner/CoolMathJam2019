@@ -20,6 +20,17 @@ public class Possess : MonoBehaviour
 
     private Coroutine curMoveToPosCoroutine;
 
+    /// <summary>
+    /// Attempts to end possession if the skull is currently possessing something
+    /// </summary>
+    public void tryEndPossession()
+    {
+        if(possessing)
+        {
+            endPossession();
+        }
+    }
+
     private void Start()
     {
         IEnumerable<IPossessable> temp = FindObjectsOfType<MonoBehaviour>().OfType<IPossessable>();
@@ -63,13 +74,7 @@ public class Possess : MonoBehaviour
                 // otherwise check if the player tried to possess them
                 else if (Input.GetButtonDown("Possess"))
                 {
-                    Debug.Log("POSSESSING");
-                    curMoveToPosCoroutine = StartCoroutine(MoveToPosition((int)(jumpDuration * 60), curCandidate.getMountTransform()));
-                    skullMovement.CanMove = false;
-                    possessing = true;
-                    rb.useGravity = false;
-                    rb.isKinematic = true;
-                    rb.detectCollisions = false;
+                    startPossession();
                 }
             }
         }
@@ -78,21 +83,37 @@ public class Possess : MonoBehaviour
             // check if the player is trying to end possession
             if (Input.GetButtonDown("Possess"))
             {
-                Debug.Log("ENDING POSSESSION OF CANDIDATE");
-                if (curMoveToPosCoroutine != null)
-                {
-                    StopCoroutine(curMoveToPosCoroutine);
-                }
-                transform.parent = null;
-                curCandidate.OnDePossess();
-                possessing = false;
-                skullMovement.CanMove = true;
-                rb.useGravity = true;
-                rb.isKinematic = false;
-                rb.detectCollisions = true;
-                StartCoroutine(RotateHead(10, originalRot));
+                endPossession();
             }
         }
+    }
+
+    private void startPossession()
+    {
+        Debug.Log("POSSESSING");
+        curMoveToPosCoroutine = StartCoroutine(MoveToPosition((int)(jumpDuration * 60), curCandidate.getMountTransform()));
+        skullMovement.CanMove = false;
+        possessing = true;
+        rb.useGravity = false;
+        rb.isKinematic = true;
+        rb.detectCollisions = false;
+    }
+
+    private void endPossession()
+    {
+        Debug.Log("ENDING POSSESSION OF CANDIDATE");
+        if (curMoveToPosCoroutine != null)
+        {
+            StopCoroutine(curMoveToPosCoroutine);
+        }
+        transform.parent = null;
+        curCandidate.OnDePossess();
+        possessing = false;
+        skullMovement.CanMove = true;
+        rb.useGravity = true;
+        rb.isKinematic = false;
+        rb.detectCollisions = true;
+        StartCoroutine(RotateHead(10, originalRot));
     }
 
     private IEnumerator MoveToPosition(int numFrames, Transform newParent)

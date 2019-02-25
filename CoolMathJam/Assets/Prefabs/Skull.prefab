@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8873473727825697672}
   - component: {fileID: 8873473727825697673}
   - component: {fileID: 8873473726629601893}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Skull
-  m_TagString: Untagged
+  m_TagString: Skull
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +107,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HappySkull
       objectReference: {fileID: 0}
+    - target: {fileID: 8988309044900839006, guid: 43f4a135226879a49a7b7eb3f9c5d535,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8988309044900839005, guid: 43f4a135226879a49a7b7eb3f9c5d535,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -161,6 +166,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988309044153553816, guid: 43f4a135226879a49a7b7eb3f9c5d535,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43f4a135226879a49a7b7eb3f9c5d535, type: 3}

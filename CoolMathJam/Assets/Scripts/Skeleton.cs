@@ -35,6 +35,10 @@ public class Skeleton : MonoBehaviour, IPossessable
     {
         renderer.material = ValidCandidateMat;
         GetComponent<SkeletonMovement>().CanMove = false;
+
+        ThrowSkull ts = GetComponent<ThrowSkull>();
+        if (ts != null)
+            ts.canThrow = false;
     }
 
     public void OnNoLongerCandidate()
@@ -46,5 +50,9 @@ public class Skeleton : MonoBehaviour, IPossessable
     {
         renderer.material = originalMat;
         GetComponent<SkeletonMovement>().CanMove = true;
+
+        ThrowSkull ts = GetComponent<ThrowSkull>();
+        if (ts != null)
+            ts.canThrow = true;
     }
 }
